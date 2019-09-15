@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7A88AC89-CF64-4EAF-958E-20D060D87036}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{DE7CB565-52B4-4862-A65D-5D4D96BC5F0D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{5A8A7DCE-92B1-41A8-AE6C-A91FA758CD43}"
+	ProjectSection(SolutionItems) = preProject
+		build\eventbus-integrationevents.yaml = build\eventbus-integrationevents.yaml
+		build\eventbus-servicebus.yaml = build\eventbus-servicebus.yaml
+		build\eventbus.yaml = build\eventbus.yaml
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "src\EventBus\EventBus.csproj", "{29E84190-089A-4A6A-AC0D-15CBA432FCDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.IntegrationEvents", "src\EventBus.IntegrationEvents\EventBus.IntegrationEvents.csproj", "{F17648CB-8DA8-49C1-B608-30930CF66756}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.ServiceBus", "src\EventBus.ServiceBus\EventBus.ServiceBus.csproj", "{EB94AD12-A760-4E98-993B-5339BF73D32B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E84190-089A-4A6A-AC0D-15CBA432FCDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E84190-089A-4A6A-AC0D-15CBA432FCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E84190-089A-4A6A-AC0D-15CBA432FCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E84190-089A-4A6A-AC0D-15CBA432FCDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F17648CB-8DA8-49C1-B608-30930CF66756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F17648CB-8DA8-49C1-B608-30930CF66756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F17648CB-8DA8-49C1-B608-30930CF66756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F17648CB-8DA8-49C1-B608-30930CF66756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB94AD12-A760-4E98-993B-5339BF73D32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB94AD12-A760-4E98-993B-5339BF73D32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB94AD12-A760-4E98-993B-5339BF73D32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB94AD12-A760-4E98-993B-5339BF73D32B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29E84190-089A-4A6A-AC0D-15CBA432FCDA} = {7A88AC89-CF64-4EAF-958E-20D060D87036}
+		{F17648CB-8DA8-49C1-B608-30930CF66756} = {7A88AC89-CF64-4EAF-958E-20D060D87036}
+		{EB94AD12-A760-4E98-993B-5339BF73D32B} = {7A88AC89-CF64-4EAF-958E-20D060D87036}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7238AEE8-3D4B-45B4-8EA8-B2A71E3285CF}
+	EndGlobalSection
+EndGlobal

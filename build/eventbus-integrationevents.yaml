@@ -3,8 +3,6 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  version: 0.1.0-beta
-  feedName: armsoft
 
 trigger:
   branches:
@@ -16,24 +14,11 @@ trigger:
     exclude:
     - src/**
 
-steps:
-- task: DotNetCoreCLI@2
-  displayName: Restore NuGet packages
-  inputs:
-    command: 'restore'
-    projects: 'src/EventBus.IntegrationEvents/**/*.csproj'
-    feedsToUse: config
-    nugetConfigPath: 'nuget.config'
-
-- script: dotnet build 'src/EventBus.IntegrationEvents/EventBus.IntegrationEvents' -c $(buildConfiguration) --no-restore
+- script: dotnet build 'src/EventBus.IntegrationEvents' -c $(buildConfiguration)
   displayName: Build - $(buildConfiguration)
 
-- script: dotnet pack 'src/EventBus.IntegrationEvents/EventBus.IntegrationEvents' /p:PackageVersion=$(version) -c $(buildConfiguration) -o '$(Build.ArtifactStagingDirectory)/packages' --no-build
+- script: dotnet pack 'src/EventBusEventBus.IntegrationEvents' /p:PackageVersion=$(version) -c $(buildConfiguration) -o '$(Build.ArtifactStagingDirectory)/packages/eventbus/integrationevents' --no-build
   displayName: Create NuGet packages
 
-- task: NuGetCommand@2
-  displayName: Publish NuGet packages
-  inputs:
-    command: push
-    publishVstsFeed: '$(feedName)'
-    allowPackageConflicts: true
+- script: dotnet nuget push '$(Build.ArtifactStagingDirectory)/packages/eventbus/integrationevents/*.nupkg' -k $(nugetApiKey)
+  displayName: Publish NuGet packages 

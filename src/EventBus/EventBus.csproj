@@ -7,9 +7,14 @@
 	<IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageId>Armsoft.EventBus</PackageId>
-    <Version>0.1.0-beta</Version>
+    <Version>1.0.0</Version>
     <Authors>Kane Armstrong</Authors>
     <Company>Armsoft</Company>
+    <Description>Provides abstractions for an event bus.</Description>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/kane-armstrong/event-bus</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/kane-armstrong/event-bus</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
