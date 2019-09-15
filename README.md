@@ -69,7 +69,7 @@ public void ConfigureServices(IServiceCollection services)
                     sql.MigrationsAssembly(typeof(IntegrationEventLogContext).Assembly.FullName);
                 });
         };
-        options.DefaultSchema = "accounts";
+        options.DefaultSchema = "myschema";
     });
 }
 ````
